@@ -35,13 +35,13 @@ namespace SubDomainRouting
                     name:"admin",
                     pattern:"/",
                     defaults: new { controller="Admin",action="Index"}
-                    ).RequireHost("*.admin.localhost");
+                    ).RequireHost("*.admin.subdomain.azurewebsites.net");
 
                 endpoints.MapControllerRoute(
                     name: "user",
                     pattern: "/",
                     defaults: new { controller = "User", action = "Index" }
-                    ).RequireHost("*.user.localhost");
+                    ).RequireHost("*.user.subdomain.azurewebsites.net");
 
             });
         }
